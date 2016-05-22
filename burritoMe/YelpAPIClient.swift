@@ -10,16 +10,16 @@ import Foundation
 import OAuthSwift
 
 struct YelpAPIConsole {
-    var consumerKey = "USE YOUR KEY"
-    var consumerSecret = "USE YOUR KEY"
-    var accessToken = "USE YOUR KEY"
-    var accessTokenSecret = "USE YOUR KEY"
+    var consumerKey = "guiXUUviIdiC0yJlFyx-7Q"
+    var consumerSecret = "vgyKDEGMUVN5xWCfCIav_SEdlwo"
+    var accessToken = "RRqw7VSiGJbwQ6CksQ6kWdiqmJVEy6VE"
+    var accessTokenSecret = "faT3StvNUssWaG58EwExRVJBJ0k"
 }
 
 class YelpAPIClient: NSObject {
     
     let APIBaseUrl = "https://api.yelp.com/v2/"
-    let clientOAuth: OAuthSwiftClient?
+    let clientOAuth: OAuthSwiftClient
     let apiConsoleInfo: YelpAPIConsole
     
     override init() {
@@ -51,10 +51,21 @@ class YelpAPIClient: NSObject {
      
      */
     
-    func searchPlacesWithParameters(searchParameters: Dictionary<String, String>, successSearch: (data: NSData, response: NSHTTPURLResponse) -> Void, failureSearch: (error: NSError) -> Void) {
+    func searchPlacesWithParameters(searchParameters: Dictionary<String, String>, successSearch: (data: NSData, response: NSHTTPURLResponse) -> Void, failureSearch: (error: NSError) -> Void)->String {
         let searchUrl = APIBaseUrl + "search/"
-        clientOAuth!.get(searchUrl, parameters: searchParameters, success: successSearch, failure: failureSearch)
+        clientOAuth.get(searchUrl, parameters: searchParameters, success: successSearch, failure: failureSearch)
+        print(clientOAuth)
+        return "how do we get results"
     }
+    
+    // @author: Erik Goodman
+    func searchPlacesbyUrl(url: String, successSearch: (data: NSData, response: NSHTTPURLResponse) -> Void, failureSearch: (error: NSError) -> Void)->String {
+        let searchUrl = APIBaseUrl + "search/"
+        print(clientOAuth.get(searchUrl + url, success: successSearch, failure: failureSearch))
+        print(clientOAuth)
+        return "retrieved"
+    }
+    
     
     /*
      
@@ -83,7 +94,7 @@ class YelpAPIClient: NSObject {
         if parameters == nil {
             parameters = Dictionary<String, String>()
         }
-        clientOAuth!.get(businessInformationUrl, parameters: parameters!, success: successSearch, failure: failureSearch)
+        clientOAuth.get(businessInformationUrl, parameters: parameters!, success: successSearch, failure: failureSearch)
     }
     
     /*
@@ -116,6 +127,6 @@ class YelpAPIClient: NSObject {
         
         parameters!["phone"] = phoneNumber
         
-        clientOAuth!.get(phoneSearchUrl, parameters: parameters!, success: successSearch, failure: failureSearch)
+        clientOAuth.get(phoneSearchUrl, parameters: parameters!, success: successSearch, failure: failureSearch)
     }
 }
