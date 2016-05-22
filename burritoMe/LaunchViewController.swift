@@ -16,8 +16,9 @@ class LaunchViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet weak var lng: UITextField!
     
     @IBAction func launchTable(sender: UIButton) {
-        getLoc()
-        getBur()
+        let myLoc = getLoc()
+        print(myLoc)
+        getBur(myLoc)
         
     }
     
@@ -31,36 +32,36 @@ class LaunchViewController: UIViewController, UITextFieldDelegate, UINavigationC
     func getLoc()-> CLLocation {
         //prod
         
-//        let locManager = CLLocationManager()
-//        locManager.requestWhenInUseAuthorization()
-//        
-//        var currentLocation = CLLocation()
-//        
-//        if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse){
-//            
-//            currentLocation = locManager.location!
-//            
-//            lat.text = "\(currentLocation.coordinate.longitude)"
-//            lng.text = "\(currentLocation.coordinate.latitude)"
-//            return currentLocation
-//        } else {
-//            return null
-//        }
-
+        /*
+        let locManager = CLLocationManager()
+        locManager.requestWhenInUseAuthorization()
         
-        //dev (Phoenix)
-        return CLLocation(latitude: 33.4484, longitude: 112.0740)
+        var currentLocation = CLLocation()
+        
+        if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse){
+            
+            currentLocation = locManager.location!
+            
+            lat.text = "\(currentLocation.coordinate.longitude)"
+            lng.text = "\(currentLocation.coordinate.latitude)"
+            return currentLocation
+        } else {
+            //this is bad (defaults to Phoenix)
+            return CLLocation(latitude: 33.4484, longitude: -112.0740)
+        }
+        */
+        
+        //dev - Phoenix
+        return CLLocation(latitude: 33.4484, longitude: -112.0740)
     }
     
-    func getBur() {
-
+    func getBur(location: CLLocation) {
+        // api style: https://api.yelp.com/v2/search?term=food&ll=37.788022,-122.399797
+        let lat = location.coordinate.latitude
+        let lng = location.coordinate.longitude
+        let url = "?term=burrito&ll=\(lat),\(lng)&limit=5"
+        
         let client = YelpAPIClient()
-        
-
-//        https://api.yelp.com/v2/search?term=food&ll=37.788022,-122.399797
-        let url = "?term=burrito&ll=33.4484,-112.0740&limit=5"
-        
-        
         client.searchPlacesbyUrl(url, successSearch: { (data, response) -> Void in
             self.parseResults(NSString(data: data, encoding: NSUTF8StringEncoding)!)
             }, failureSearch: { (error) -> Void in
@@ -74,8 +75,8 @@ class LaunchViewController: UIViewController, UITextFieldDelegate, UINavigationC
         var businesses = "businesses:\n"
         if let dataFromString = results.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
             let json = JSON(data: dataFromString)
-            for var i = 0; i < 5; ++i {
-                if let bus = json["businesses"][i]["name"].string {
+            for x in  0..<5 {
+                if let bus = json["businesses"][x]["name"].string {
                     businesses += "\t\(bus)\n"
                 }
             }
