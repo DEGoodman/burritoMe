@@ -62,7 +62,7 @@ class YelpAPIClient: NSObject {
     func searchPlacesbyUrl(url: String, successSearch: (data: NSData, response: NSHTTPURLResponse) -> Void, failureSearch: (error: NSError) -> Void)->String {
         let searchUrl = APIBaseUrl + "search/"
         print(clientOAuth.get(searchUrl + url, success: successSearch, failure: failureSearch))
-        print(clientOAuth)
+//        print(clientOAuth)
         return "retrieved"
     }
     

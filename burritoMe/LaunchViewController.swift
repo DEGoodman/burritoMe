@@ -51,25 +51,28 @@ class LaunchViewController: UIViewController, UITextFieldDelegate, UINavigationC
         return CLLocation(latitude: 33.4484, longitude: 112.0740)
     }
     
-    func getBur()->[Burrito] {
+    func getBur() {
 
         let client = YelpAPIClient()
         
         //let parameters = ["ll": "\(lat.text),\(lng.text)", "term": "burrito", "radius_filter": "3000", "sort": "0"]
 
         //        https://api.yelp.com/v2/search?term=food&ll=37.788022,-122.399797
-        let url = "?term=burrito&ll=33.4484,-112.0740"
-        let res = client.searchPlacesbyUrl(url, successSearch: { (data, response) -> Void in
-            print (NSString(data: data, encoding: NSUTF8StringEncoding))
+        let url = "?term=burrito&ll=33.4484,-112.0740&limit=5"
+        
+        
+        client.searchPlacesbyUrl(url, successSearch: { (data, response) -> Void in
+            self.parseResults(NSString(data: data, encoding: NSUTF8StringEncoding)!)
             }, failureSearch: { (error) -> Void in
                 print(error)
         })
         
-        
-
-//        let res = client.getPlacesWithParams(parameters)
-        print(res)
-        return[]
+    }
+    
+    func parseResults(results:NSString){
+        // convert to json
+//        let data = NSData(results)
+        print(results)
     }
     
     override func viewDidLoad() {
