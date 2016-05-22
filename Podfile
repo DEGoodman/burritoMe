@@ -6,7 +6,7 @@ target 'burritoMe' do
   use_frameworks!
 
   # Pods for burritoMe
-  # pod "YelpAPI"
+	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
   target 'burritoMeTests' do
     inherit! :search_paths

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import SwiftyJSON
 
 class LaunchViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate{
 
@@ -55,9 +56,8 @@ class LaunchViewController: UIViewController, UITextFieldDelegate, UINavigationC
 
         let client = YelpAPIClient()
         
-        //let parameters = ["ll": "\(lat.text),\(lng.text)", "term": "burrito", "radius_filter": "3000", "sort": "0"]
 
-        //        https://api.yelp.com/v2/search?term=food&ll=37.788022,-122.399797
+//        https://api.yelp.com/v2/search?term=food&ll=37.788022,-122.399797
         let url = "?term=burrito&ll=33.4484,-112.0740&limit=5"
         
         
@@ -71,8 +71,16 @@ class LaunchViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     func parseResults(results:NSString){
         // convert to json
-//        let data = NSData(results)
-        print(results)
+        var businesses = "businesses:\n"
+        if let dataFromString = results.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+            let json = JSON(data: dataFromString)
+            for var i = 0; i < 5; ++i {
+                if let bus = json["businesses"][i]["name"].string {
+                    businesses += "\t\(bus)\n"
+                }
+            }
+        }
+       print(businesses)
     }
     
     override func viewDidLoad() {
