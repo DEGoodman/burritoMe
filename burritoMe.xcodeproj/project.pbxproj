@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E529468F1CF12A560084D0CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529468E1CF12A560084D0CD /* AppDelegate.swift */; };
-		E52946911CF12A560084D0CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52946901CF12A560084D0CD /* ViewController.swift */; };
+		E52946911CF12A560084D0CD /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52946901CF12A560084D0CD /* LaunchViewController.swift */; };
 		E52946941CF12A560084D0CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52946921CF12A560084D0CD /* Main.storyboard */; };
 		E52946961CF12A560084D0CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52946951CF12A560084D0CD /* Assets.xcassets */; };
 		E52946991CF12A560084D0CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52946971CF12A560084D0CD /* LaunchScreen.storyboard */; };
 		E52946A41CF12A560084D0CD /* burritoMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52946A31CF12A560084D0CD /* burritoMeTests.swift */; };
+		E52946B11CF141140084D0CD /* BurritoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52946B01CF141140084D0CD /* BurritoTableViewCell.swift */; };
+		E52946B31CF143320084D0CD /* Burrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52946B21CF143320084D0CD /* Burrito.swift */; };
+		E5AE4E651CF15A7E007AF7F0 /* BurritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE4E641CF15A7E007AF7F0 /* BurritoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,7 @@
 /* Begin PBXFileReference section */
 		E529468B1CF12A560084D0CD /* burritoMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = burritoMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E529468E1CF12A560084D0CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E52946901CF12A560084D0CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E52946901CF12A560084D0CD /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		E52946931CF12A560084D0CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E52946951CF12A560084D0CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E52946981CF12A560084D0CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		E529469F1CF12A560084D0CD /* burritoMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = burritoMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52946A31CF12A560084D0CD /* burritoMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burritoMeTests.swift; sourceTree = "<group>"; };
 		E52946A51CF12A560084D0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E52946B01CF141140084D0CD /* BurritoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurritoTableViewCell.swift; sourceTree = "<group>"; };
+		E52946B21CF143320084D0CD /* Burrito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Burrito.swift; sourceTree = "<group>"; };
+		E5AE4E641CF15A7E007AF7F0 /* BurritoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurritoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,11 @@
 		E529468D1CF12A560084D0CD /* burritoMe */ = {
 			isa = PBXGroup;
 			children = (
+				E52946B01CF141140084D0CD /* BurritoTableViewCell.swift */,
+				E5AE4E641CF15A7E007AF7F0 /* BurritoTableViewController.swift */,
+				E52946B21CF143320084D0CD /* Burrito.swift */,
 				E529468E1CF12A560084D0CD /* AppDelegate.swift */,
-				E52946901CF12A560084D0CD /* ViewController.swift */,
+				E52946901CF12A560084D0CD /* LaunchViewController.swift */,
 				E52946921CF12A560084D0CD /* Main.storyboard */,
 				E52946951CF12A560084D0CD /* Assets.xcassets */,
 				E52946971CF12A560084D0CD /* LaunchScreen.storyboard */,
@@ -199,8 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52946911CF12A560084D0CD /* ViewController.swift in Sources */,
+				E52946B11CF141140084D0CD /* BurritoTableViewCell.swift in Sources */,
+				E5AE4E651CF15A7E007AF7F0 /* BurritoTableViewController.swift in Sources */,
+				E52946911CF12A560084D0CD /* LaunchViewController.swift in Sources */,
 				E529468F1CF12A560084D0CD /* AppDelegate.swift in Sources */,
+				E52946B31CF143320084D0CD /* Burrito.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +402,7 @@
 				E52946AA1CF12A560084D0CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E52946AB1CF12A560084D0CD /* Build configuration list for PBXNativeTarget "burritoMeTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +411,7 @@
 				E52946AD1CF12A560084D0CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

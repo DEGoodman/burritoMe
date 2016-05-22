@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LaunchViewController.swift
 //  burritoMe
 //
 //  Created by David Goodman on 5/21/16.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class LaunchViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var lat: UITextField!
     @IBOutlet weak var lng: UITextField!
