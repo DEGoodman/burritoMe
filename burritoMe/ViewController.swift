@@ -14,33 +14,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var lat: UITextField!
     @IBOutlet weak var lng: UITextField!
     
-    @IBAction func launchBut(sender: UIButton) {
-        let locManager = CLLocationManager()
-        locManager.requestWhenInUseAuthorization()
+    @IBAction func launchTable(sender: UIButton) {
+        let myLoc = getLoc()
+        lat.text = "\(myLoc.coordinate.longitude)"
+        lng.text = "\(myLoc.coordinate.latitude)"
+    }
+    
+    @IBAction func launchTinder(sender: UIButton) {
+        let myLoc = getLoc()
+        lat.text = "\(myLoc.coordinate.longitude)"
+        lng.text = "\(myLoc.coordinate.latitude)"
+    }
+    
+
+    func getLoc()-> CLLocation {
+        //prod
         
-        var currentLocation = CLLocation()
-        
-        // prod
+//        let locManager = CLLocationManager()
+//        locManager.requestWhenInUseAuthorization()
+//        
+//        var currentLocation = CLLocation()
+//        
 //        if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse){
 //            
 //            currentLocation = locManager.location!
 //            
-//        }
-//        if (currentLocation){
 //            lat.text = "\(currentLocation.coordinate.longitude)"
 //            lng.text = "\(currentLocation.coordinate.latitude)"
+//            return currentLocation
 //        } else {
-//            lat.text = "fail";
-//            lng.text = "fail";
+//            return null
 //        }
-        
-        // dev
-        let myLocation = CLLocation(latitude: 33.4484, longitude: 112.0740)
-        currentLocation = myLocation;
-        
-        lat.text = "\(currentLocation.coordinate.longitude)"
-        lng.text = "\(currentLocation.coordinate.latitude)"
 
+        
+        //dev (Phoenix)
+        return CLLocation(latitude: 33.4484, longitude: 112.0740)
     }
     
     override func viewDidLoad() {
