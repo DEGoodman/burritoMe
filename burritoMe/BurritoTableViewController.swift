@@ -28,6 +28,12 @@ class BurritoTableViewController: UITableViewController {
     }
     
     func loadSampleData() {
+        
+        let YLPClient = [YLPClient]initWithConsumerKey:<key>
+            consumerSecret:<consumer_secret>
+            token:<token>
+            tokenSecret:<token_secret>];
+        
         let meal1 = Burrito(name:"Bur 1", loc:CLLocation(latitude: 1, longitude: 1), dist:1)
         let meal2 = Burrito(name:"Bur 2", loc:CLLocation(latitude: 2, longitude: 2), dist:2)
         let meal3 = Burrito(name:"Bur 3", loc:CLLocation(latitude: 3, longitude: 3), dist:3)

@@ -1,6 +1,0 @@
-framework module Pods_burritoMeTests {
-  umbrella header "Pods-burritoMeTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

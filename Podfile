@@ -6,7 +6,7 @@ target 'burritoMe' do
   use_frameworks!
 
   # Pods for burritoMe
-	pod "YelpAPI"
+  # pod "YelpAPI"
 
   target 'burritoMeTests' do
     inherit! :search_paths
