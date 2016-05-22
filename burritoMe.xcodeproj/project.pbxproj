@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173DDBBD7D0D867937F1BDFD /* Pods_burritoMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C840F10F6321BA34131F519D /* Pods_burritoMeTests.framework */; };
 		E529468F1CF12A560084D0CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529468E1CF12A560084D0CD /* AppDelegate.swift */; };
 		E52946911CF12A560084D0CD /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52946901CF12A560084D0CD /* LaunchViewController.swift */; };
 		E52946941CF12A560084D0CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52946921CF12A560084D0CD /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		E52946B11CF141140084D0CD /* BurritoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52946B01CF141140084D0CD /* BurritoTableViewCell.swift */; };
 		E52946B31CF143320084D0CD /* Burrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52946B21CF143320084D0CD /* Burrito.swift */; };
 		E5AE4E651CF15A7E007AF7F0 /* BurritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AE4E641CF15A7E007AF7F0 /* BurritoTableViewController.swift */; };
+		E60A92EA19E3C4C1F059D056 /* Pods_burritoMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2354B448E612558B25B0B02 /* Pods_burritoMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20A97CA1B0DA15A018ED0ED8 /* Pods-burritoMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-burritoMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-burritoMeTests/Pods-burritoMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F8AE7DCDEC4B5028E1D1DE5 /* Pods-burritoMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-burritoMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-burritoMe/Pods-burritoMe.debug.xcconfig"; sourceTree = "<group>"; };
+		C2354B448E612558B25B0B02 /* Pods_burritoMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_burritoMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C840F10F6321BA34131F519D /* Pods_burritoMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_burritoMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CA1C8C80063AA16F168AA1 /* Pods-burritoMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-burritoMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-burritoMe/Pods-burritoMe.release.xcconfig"; sourceTree = "<group>"; };
 		E529468B1CF12A560084D0CD /* burritoMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = burritoMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E529468E1CF12A560084D0CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E52946901CF12A560084D0CD /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +49,7 @@
 		E52946B01CF141140084D0CD /* BurritoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurritoTableViewCell.swift; sourceTree = "<group>"; };
 		E52946B21CF143320084D0CD /* Burrito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Burrito.swift; sourceTree = "<group>"; };
 		E5AE4E641CF15A7E007AF7F0 /* BurritoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurritoTableViewController.swift; sourceTree = "<group>"; };
+		F894D9140F83F6DE5D66F83D /* Pods-burritoMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-burritoMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-burritoMeTests/Pods-burritoMeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E60A92EA19E3C4C1F059D056 /* Pods_burritoMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,18 +65,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173DDBBD7D0D867937F1BDFD /* Pods_burritoMeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B4F2B4792D98269F304D71C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F8AE7DCDEC4B5028E1D1DE5 /* Pods-burritoMe.debug.xcconfig */,
+				E1CA1C8C80063AA16F168AA1 /* Pods-burritoMe.release.xcconfig */,
+				20A97CA1B0DA15A018ED0ED8 /* Pods-burritoMeTests.debug.xcconfig */,
+				F894D9140F83F6DE5D66F83D /* Pods-burritoMeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A2D4B3A821CE5F11877E7033 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2354B448E612558B25B0B02 /* Pods_burritoMe.framework */,
+				C840F10F6321BA34131F519D /* Pods_burritoMeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E52946821CF12A560084D0CD = {
 			isa = PBXGroup;
 			children = (
 				E529468D1CF12A560084D0CD /* burritoMe */,
 				E52946A21CF12A560084D0CD /* burritoMeTests */,
 				E529468C1CF12A560084D0CD /* Products */,
+				1B4F2B4792D98269F304D71C /* Pods */,
+				A2D4B3A821CE5F11877E7033 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E52946A81CF12A560084D0CD /* Build configuration list for PBXNativeTarget "burritoMe" */;
 			buildPhases = (
+				AECCD85606D52E70E54BD915 /* 📦 Check Pods Manifest.lock */,
 				E52946871CF12A560084D0CD /* Sources */,
 				E52946881CF12A560084D0CD /* Frameworks */,
 				E52946891CF12A560084D0CD /* Resources */,
+				36E6FBAC9CBD8AD9C5189F0E /* 📦 Embed Pods Frameworks */,
+				65425E955C04DCDD713884EF /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E52946AB1CF12A560084D0CD /* Build configuration list for PBXNativeTarget "burritoMeTests" */;
 			buildPhases = (
+				C7B861E5EA233C7BB95E9D97 /* 📦 Check Pods Manifest.lock */,
 				E529469B1CF12A560084D0CD /* Sources */,
 				E529469C1CF12A560084D0CD /* Frameworks */,
 				E529469D1CF12A560084D0CD /* Resources */,
+				5D867BB6789FEB5F43E8F667 /* 📦 Embed Pods Frameworks */,
+				46EE50D42956A31B3E59C385 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +240,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36E6FBAC9CBD8AD9C5189F0E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-burritoMe/Pods-burritoMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46EE50D42956A31B3E59C385 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-burritoMeTests/Pods-burritoMeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D867BB6789FEB5F43E8F667 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-burritoMeTests/Pods-burritoMeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65425E955C04DCDD713884EF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-burritoMe/Pods-burritoMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AECCD85606D52E70E54BD915 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C7B861E5EA233C7BB95E9D97 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E52946871CF12A560084D0CD /* Sources */ = {
@@ -339,6 +470,7 @@
 		};
 		E52946A91CF12A560084D0CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F8AE7DCDEC4B5028E1D1DE5 /* Pods-burritoMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = burritoMe/Info.plist;
@@ -350,6 +482,7 @@
 		};
 		E52946AA1CF12A560084D0CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1CA1C8C80063AA16F168AA1 /* Pods-burritoMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = burritoMe/Info.plist;
@@ -361,6 +494,7 @@
 		};
 		E52946AC1CF12A560084D0CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20A97CA1B0DA15A018ED0ED8 /* Pods-burritoMeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = burritoMeTests/Info.plist;
@@ -373,6 +507,7 @@
 		};
 		E52946AD1CF12A560084D0CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F894D9140F83F6DE5D66F83D /* Pods-burritoMeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = burritoMeTests/Info.plist;
